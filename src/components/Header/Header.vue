@@ -53,7 +53,7 @@ export default {
         goSearch(){
             // 路由参数传递,对象形式
             this.$router.push({name:"search",params:{keyword:this.keyword||undefined},query:{k:this.keyword.toUpperCase()||undefined}},()=>{},()=>{})
-        }
+        },
     },
 }
 </script>
