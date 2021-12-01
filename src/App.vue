@@ -1,17 +1,17 @@
 <template>
   <div>
+    <Header></Header>
     app
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Header from '@/components/Header/Header.vue'
+import Footer from '@/components/Footer/Footer.vue'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components:{Header,Footer},
 }
 </script>
 
