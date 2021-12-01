@@ -26,14 +26,14 @@
             </div>
             <div class="bottom">
                 <h1 class="logoArea">
-                    <a class="logo" title="尚品汇" href="###" target="_blank">
+                    <a class="logo" title="尚品汇" href="javascript:;" @click="$router.push('/home')" >
                         <img src="./images/logo.png" alt="">
                     </a>
                 </h1>
                 <div class="searchArea">
                     <form action="###" class="searchForm">
                         <input type="text" id="autocomplete" class="input-error input-xxlarge" />
-                        <button class="sui-btn btn-xlarge btn-danger" type="button">搜索</button>
+                        <button @click="$router.push('/search')" class="sui-btn btn-xlarge btn-danger" type="button">搜索</button>
                     </form>
                 </div>
             </div>
