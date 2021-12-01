@@ -8,8 +8,8 @@
                         <p>尚品汇欢迎您！</p>
                         <p>
                             <span>请</span>
-                            <a href="###">登录</a>
-                            <a href="###" class="register">免费注册</a>
+                            <a href="javascript:;" @click="$router.push('/login')">登录</a>
+                            <a href="javascript:;" @click="$router.push('/register')" class="register">免费注册</a>
                         </p>
                     </div>
                     <div class="typeList">
