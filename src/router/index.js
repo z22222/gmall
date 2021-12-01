@@ -5,6 +5,14 @@ import Home from '@/pages/Home/Home.vue'
 import Login from '@/pages/Login/Login.vue'
 import Search from '@/pages/Search/Search.vue'
 import Register from '@/pages/Register/Register.vue'
+let originPush = VueRouter.prototype.push
+VueRouter.prototype.push = function (location,resolve,reject){
+    if(resolve&&reject){
+        originPush.call(this,location,resolve,reject)
+    }else{
+        originPush.call(this,location,()=>{},()=>{})
+    }
+}
 export default new VueRouter({
     routes:[
         {
@@ -15,11 +23,12 @@ export default new VueRouter({
             }
         },
         {
-            path:'/search',
+            path:'/search/:keyword?',
             component:Search,
             meta:{
                 showFooter:true
-            }
+            },
+            name:'search'
         },
         {
             path:'/login',
